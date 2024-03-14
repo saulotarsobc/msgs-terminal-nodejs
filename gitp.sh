@@ -1,5 +1,4 @@
 #!/bin/bash
-# by @saulocosta
 
 # Cores para mensagens
 RED='\033[0;31m'
@@ -41,4 +40,5 @@ if [ $? -ne 0 ]; then
     echo -e "${RED}Erro:${NC} Falha ao fazer push. Abortando..."
     exit 1
 else
-    echo -e "${GREEN}Sucesso:${NC} Alterações foram e
+    echo -e "${GREEN}Sucesso:${NC} Alterações foram enviadas para o repositório remoto."
+fi
