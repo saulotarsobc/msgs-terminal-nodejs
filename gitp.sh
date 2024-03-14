@@ -16,11 +16,8 @@ fi
 # Obtém o nome do usuário Git
 GIT_USER_NAME=$(git config --get user.name)
 
-# Solicita uma mensagem de commit ao usuário
-read -p "Digite uma mensagem de commit: " COMMIT_MSG
-
 # Constrói a mensagem de commit
-MSG=":fire: $GIT_USER_NAME $COMMIT_MSG"
+MSG=":fire: $GIT_USER_NAME $1"
 
 # Adiciona todas as alterações ao staging area
 git add --all
@@ -44,5 +41,4 @@ if [ $? -ne 0 ]; then
     echo -e "${RED}Erro:${NC} Falha ao fazer push. Abortando..."
     exit 1
 else
-    echo -e "${GREEN}Sucesso:${NC} Alterações foram enviadas para o repositório remoto."
-fi
+    echo -e "${GREEN}Sucesso:${NC} Alterações foram e
