@@ -16,7 +16,7 @@ fi
 GIT_USER_NAME=$(git config --get user.name)
 
 # Constrói a mensagem de commit
-MSG=":fire: $GIT_USER_NAME $1"
+MSG=":fire: @$GIT_USER_NAME $1"
 
 # Adiciona todas as alterações ao staging area
 git add --all
